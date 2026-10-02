@@ -1,0 +1,5 @@
+ARCH:=aarch64
+SUBTARGET:=an7529
+BOARDNAME:=Airoha AN7529 
+CPU_TYPE:=cortex-a53
+KERNELNAME:=Image dtbs
