@@ -217,8 +217,8 @@
 		its: gic-its@09020000 {
 			compatible = "arm,gic-v3-its";
 			msi-controller;
-			#msi-cell = <1>;
-			reg = <0x090200000 0x20000>;
+			#msi-cells = <1>;
+			reg = <0x09020000 0x20000>;
 		};
 	};
 
@@ -424,15 +424,15 @@
 		interrupts = <GIC_SPI 35 IRQ_TYPE_LEVEL_HIGH>;
 	};
 
-	crypto@1e004000 {
+	crypto@1fb70000 {
 		compatible = "inside-secure,safexcel-eip93ies";
 		reg = <0x1fb70000 0x1000>;
 		interrupts = <GIC_SPI 44 IRQ_TYPE_LEVEL_HIGH>;
 	};
 
-	thermal: thermal-sensor@1efbd800 {
+	thermal: thermal-sensor@1efbd000 {
 		compatible = "airoha,en7523-thermal";
-		reg = <0x1efbd000 0x0fff>;
+		reg = <0x1efbd000 0x1000>;
 		interrupts = <GIC_SPI 23 IRQ_TYPE_LEVEL_HIGH>;
 		airoha,chip-scu = <&chip_scu>;
 
