@@ -1,11 +1,11 @@
 
-define Device/airoha_en7523-evb
+define Device/airoha_an7529-evb
   $(Device/FitImage)
   DEVICE_VENDOR := Airoha
-  DEVICE_MODEL := EN7523 Evaluation Board
-  DEVICE_DTS := en7523-evb
+  DEVICE_MODEL := AN7529 Evaluation Board
+  DEVICE_DTS := an7529-evb
 endef
-TARGET_DEVICES += airoha_en7523-evb
+TARGET_DEVICES += airoha_an7529-evb
 
 define Device/skyworth_gn630v
   $(Device/Uboot-FitImage)
