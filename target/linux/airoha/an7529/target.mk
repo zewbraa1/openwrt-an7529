@@ -8,5 +8,5 @@ DEFAULT_PACKAGES += \
 	airoha-en7523-npu-firmware
 
 define Target/Description
-  Build firmware images for Airoha an7529 ARM based boards.
+  Build firmware images for Airoha AN7529 ARM based boards.
 endef
