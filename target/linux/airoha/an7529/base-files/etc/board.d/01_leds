@@ -1,0 +1,29 @@
+#
+# Copyright (C) 2015 OpenWrt.org
+#
+
+. /lib/functions/uci-defaults.sh
+
+board_config_update
+
+board=$(board_name)
+
+# Switch
+  case "$board" in
+skyworth,gn630v)
+	ucidef_set_led_default "power" "power" "green:status-11" "1"
+	ucidef_set_led_netdev "wan" "wan" "green:wan-online-1" "wan" "link tx rx"
+	ucidef_set_led_netdev "wan_err" "wan_err" "red:wan-10" "wan" "link"
+	ucidef_set_led_usbdev "usb" "usb" "green:usb-2" "1-1"
+	ucidef_set_led_wlan "wlan" "wlan" "green:wlan-26" "phy0tx"
+	ucidef_set_led_netdev "lan1" "lan1" "green:lan-1" "lan1" "link tx rx"
+	ucidef_set_led_netdev "lan2" "lan2" "green:lan-2" "lan2" "link tx rx"
+	ucidef_set_led_netdev "lan3" "lan3" "green:lan-3" "lan3" "link tx rx"
+	ucidef_set_led_netdev "lan4" "lan4" "green:lan-4" "lan4" "link tx rx"
+	;;
+
+esac
+
+board_config_flush
+
+exit 0
