@@ -21,7 +21,14 @@ skyworth,gn630v)
 	ucidef_set_led_netdev "lan3" "lan3" "green:lan-3" "lan3" "link tx rx"
 	ucidef_set_led_netdev "lan4" "lan4" "green:lan-4" "lan4" "link tx rx"
 	;;
+esac
 
+## Wireless
+	case "$board" in
+skyworth,gn630v)
+		ucidef_set_led_netdev "phy0-ap0" "phy0-ap0" "green:wlan-26" "phy0-ap0" "link tx rx"
+		ucidef_set_led_netdev "phy1-ap0" "phy1-ap0" "green:wlan-26" "phy1-ap0" "link tx rx"
+	;;
 esac
 
 board_config_flush
