@@ -8,7 +8,7 @@
 
 / {
 	model = "Skyworth GN630V";
-	compatible = "Skyworth GN630V", "airoha,an7529";
+	compatible = "skyworth,gn630v", "airoha,an7529";
 
 	chosen {
 		rootdisk = <&firmware>;
