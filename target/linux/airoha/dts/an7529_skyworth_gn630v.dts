@@ -65,7 +65,7 @@
   
 		/* Internet Status - Green*/
 		led@1 {
-			color = <LED_COLOR_ID_BLUE>;
+			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_WAN_ONLINE;
 			function-enumerator = <1>;
 			gpios = <&pinctrl 1 GPIO_ACTIVE_LOW>;
