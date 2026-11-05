@@ -55,6 +55,14 @@
 			gpios = <&pinctrl 11 GPIO_ACTIVE_LOW>;
 		};
 
+		/* PON - Green*/
+		led@6 {
+			color = <LED_COLOR_ID_GREEN>;
+			function = LED_FUNCTION_WAN_ONLINE;
+			function-enumerator = <1>;
+			gpios = <&pinctrl 6 GPIO_ACTIVE_LOW>;	
+		};
+
 		/* Internet Status LOS - Red */
 		led@10 {
 			color = <LED_COLOR_ID_RED>;
@@ -62,22 +70,21 @@
 			function-enumerator = <10>;
 			gpios = <&pinctrl 10 GPIO_ACTIVE_LOW>;
 		};
-  
-		/* Internet Status - Green*/
-		led@1 {
-			color = <LED_COLOR_ID_GREEN>;
-			function = LED_FUNCTION_WAN_ONLINE;
-			function-enumerator = <1>;
-			gpios = <&pinctrl 1 GPIO_ACTIVE_LOW>;
-		};
 
-		/* WIFI */
-		led@26 {
+	/* WLAN 5G LED (GPIO 4) */
+		led@4 {
 			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_WLAN;
-			function-enumerator = <6>;
-			gpios = <&pinctrl 26 GPIO_ACTIVE_LOW>;
+			function-enumerator = <5>;
+			gpios = <&pinctrl 4 GPIO_ACTIVE_LOW>;
 		};
+
+		/* WPS LED (GPIO 26) */
+		led@26 {	
+			color = <LED_COLOR_ID_GREEN>;
+			function = LED_FUNCTION_WPS;
+			gpios = <&pinctrl 26 GPIO_ACTIVE_LOW>;
+		};			
 
 	/* LAN Port 1 -> GPIO 22 */
 		led@22 {
