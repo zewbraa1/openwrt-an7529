@@ -10,6 +10,13 @@
 	model = "Skyworth GN630V";
 	compatible = "skyworth,gn630v", "airoha,en7523";
 
+	aliases {
+		led-boot = &led_power;
+		led-failsafe = &led_power;
+		led-running = &led_power;
+		led-upgrade = &led_power;
+	};
+
 	chosen {
 		rootdisk = <&firmware>;
 		bootargs = "console=ttyS0,115200 earlycon ubi.block=0,fit root=/dev/fit0 rootwait";
