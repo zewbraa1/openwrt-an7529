@@ -47,46 +47,49 @@
 	leds {
 		compatible = "gpio-leds";
 
-		/* Power */
+		/* Power - Green */
 		led_power: led@11 {
 			color = <LED_COLOR_ID_GREEN>;
-			function = LED_FUNCTION_STATUS;
-			function-enumerator = <11>;
+			function = LED_FUNCTION_POWER;
 			gpios = <&pinctrl 11 GPIO_ACTIVE_LOW>;
 		};
 
-		/* PON - Green*/
+		/* PON - Green */
 		led@6 {
 			color = <LED_COLOR_ID_GREEN>;
-			function = LED_FUNCTION_WAN_ONLINE;
-			function-enumerator = <1>;
+			function = LED_FUNCTION_STATUS;
 			gpios = <&pinctrl 6 GPIO_ACTIVE_LOW>;	
 		};
 
-		/* Internet Status LOS - Red */
+		/* LOS - Red */
 		led@10 {
 			color = <LED_COLOR_ID_RED>;
 			function = LED_FUNCTION_WAN;
-			function-enumerator = <10>;
 			gpios = <&pinctrl 10 GPIO_ACTIVE_LOW>;
 		};
 
-	/* WLAN 5G LED (GPIO 4) */
+		/* Internet - Green */
+		led@1 {
+			color = <LED_COLOR_ID_GREEN>;
+			function = LED_FUNCTION_INTERNET;
+			gpios = <&pinctrl 1 GPIO_ACTIVE_LOW>;
+		};
+
+		/* WLAN 5G  */
 		led@4 {
 			color = <LED_COLOR_ID_GREEN>;
-			function = LED_FUNCTION_WLAN;
-			function-enumerator = <5>;
+			function = LED_FUNCTION_WLAN_5GHZ;
 			gpios = <&pinctrl 4 GPIO_ACTIVE_LOW>;
 		};
 
-		/* WPS LED (GPIO 26) */
+		/* WPS  */
 		led@26 {	
 			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_WPS;
 			gpios = <&pinctrl 26 GPIO_ACTIVE_LOW>;
 		};			
 
-	/* LAN Port 1 -> GPIO 22 */
+		/* LAN 1  */
 		led@22 {
 			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_LAN;
@@ -94,7 +97,7 @@
 			gpios = <&pinctrl 22 GPIO_ACTIVE_LOW>;
 		};
 
-		/* LAN Port 2 -> GPIO 23 */
+		/* LAN 2 */
 		led@23 {
 			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_LAN;
@@ -102,7 +105,7 @@
 			gpios = <&pinctrl 23 GPIO_ACTIVE_LOW>;
 		};
 
-		/* LAN Port 3 -> GPIO 24 */
+	    /* LAN 3 */
 		led@24 {
 			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_LAN;
@@ -110,7 +113,7 @@
 			gpios = <&pinctrl 24 GPIO_ACTIVE_LOW>;
 		};
 
-		/* LAN Port 4 -> GPIO 25 */
+		/* LAN 4 */
 		led@25 {
 			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_LAN;
@@ -118,23 +121,20 @@
 			gpios = <&pinctrl 25 GPIO_ACTIVE_LOW>;
 		};
 
-		/* USB */
+		/* USB  */
 		led@2 {
 			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_USB;
-			function-enumerator = <4>;
 			gpios = <&pinctrl 2 GPIO_ACTIVE_HIGH>;
 		};
 
-		/* FXS1 */
+		/* FXS */
 		led@5 {
 			color = <LED_COLOR_ID_GREEN>;
-			function = LED_FUNCTION_STATUS;
-			function-enumerator = <5>;
+			function = LED_FUNCTION_VOIP;
 			gpios = <&pinctrl 5 GPIO_ACTIVE_HIGH>;
 		};
 	};
-};
 
 /*
 Old mapping NAND
