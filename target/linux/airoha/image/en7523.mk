@@ -165,3 +165,14 @@ define Device/tplink_xx230v-v1
                      kmod-mt7915e kmod-mt7915-firmware kmod-mt7916-firmware
 endef
 TARGET_DEVICES += tplink_xx230v-v1
+
+define Device/skyworth_gn630v
+  $(Device/Uboot-FitImage)
+  DEVICE_VENDOR := Skyworth
+  DEVICE_MODEL := gn630v
+  DEVICE_VARIANT := v1
+  DEVICE_PACKAGES += kmod-usb-ohci kmod-usb3 \
+                     hostapd-mbedtls wpad-mbedtls wpa-supplicant-mbedtls \
+                     kmod-mt7915e kmod-mt7916-firmware
+endef
+TARGET_DEVICES += skyworth_gn630v
