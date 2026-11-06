@@ -83,6 +83,7 @@ platform_do_upgrade() {
   genexis,zephyr |\
   mitrastar,gpt-2742gx4x5v6 |\
   tplink,ex530v-v1 |\
+  skyworth,gn630v |\
   tplink,xx230v-v1)
     fit_do_upgrade "$1"
     ;;
@@ -112,6 +113,7 @@ platform_check_image() {
   genexis,zephyr |\
   mitrastar,gpt-2742gx4x5v6 |\
   tplink,ex530v-v1 |\
+  skyworth,gn630v |\
   tplink,xx230v-v1)
     fit_check_image "$1"
     return $?
